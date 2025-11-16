@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs
+logs/
+*.log
+
+# Database files
+*.db
+*.sqlite
+kuzu_db/
+
+# Data files (but keep sample data)
+data/uploads/
+data/processed/
+data/*.ifc
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Testing
+.coverage
+.pytest_cache/
+htmlcov/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Environment files
+.env
+.env.local
+
+# Remix compiler artifacts (legacy)
+**/artifacts/
+**/artifacts/**
+deps/
+states/
+*.dbg.json
+*.tsbuildinfo
+
+# Foundry
+cache_foundry/
+out/
+broadcast/
+lib/
+
+# Keep lib directory structure but ignore contents
+!lib/.gitkeep

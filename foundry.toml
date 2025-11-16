@@ -1,0 +1,69 @@
+[profile.default]
+src = "contracts"
+out = "out"
+libs = ["lib"]
+test = "contracts/test"
+script = "contracts/script"
+cache_path = "cache_foundry"
+
+# Solc configuration
+solc = "0.8.27"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+via_ir = true
+
+# Additional compiler settings
+auto_detect_solc = false
+auto_detect_remappings = true
+offline = false
+ffi = false
+fs_permissions = [{ access = "read-write", path = "./" }]
+
+# Test configuration
+verbosity = 3
+fuzz = { runs = 256 }
+invariant = { runs = 256, depth = 15 }
+
+# Gas reporting
+gas_reports = ["BuildingGraphNFT"]
+gas_price = 30_000_000_000  # 30 gwei
+
+# Remappings for OpenZeppelin and other dependencies
+remappings = [
+    "@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+    "@openzeppelin-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+]
+
+# Formatter settings
+[fmt]
+line_length = 100
+tab_width = 4
+bracket_spacing = true
+int_types = "long"
+multiline_func_header = "all"
+quote_style = "double"
+number_underscore = "thousands"
+wrap_comments = true
+
+# RPC endpoints (configure with environment variables)
+[rpc_endpoints]
+mainnet = "${MAINNET_RPC_URL}"
+sepolia = "${SEPOLIA_RPC_URL}"
+localhost = "http://localhost:8545"
+
+# Etherscan API keys (for contract verification)
+[etherscan]
+mainnet = { key = "${ETHERSCAN_API_KEY}" }
+sepolia = { key = "${ETHERSCAN_API_KEY}" }
+
+# Profile for CI/Testing with higher fuzz runs
+[profile.ci]
+fuzz = { runs = 10000 }
+invariant = { runs = 1000, depth = 50 }
+
+# Profile for gas optimization
+[profile.intense]
+optimizer = true
+optimizer_runs = 1000000
+via_ir = true
