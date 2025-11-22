@@ -297,7 +297,7 @@ This project builds upon proven architectural patterns from adventurous_topologi
 
 ## 📄 License
 
-MIT License - see the LICENSE file for details.
+GNU AFFERO GENERAL PUBLIC LICENSE - see the LICENSE file for details.
 
 ---
 
