@@ -1,4 +1,4 @@
-# 🏗️ IFC TopologicPy Kuzu Streamlit Application
+# 🏗️ CryptoTwin: IFC TopologicPy Kuzu Streamlit Application
 
 A **clean, modular Streamlit application** that processes IFC (Industry Foundation Classes) files into connectivity graphs using TopologicPy, stores them in Kuzu graph database, and provides 3D visualization. Features blockchain tokenization capabilities via Ethereum smart contracts.
 
@@ -177,6 +177,66 @@ pytest --cov=src/
 python scripts/benchmark_processing.py
 ```
 
+# 🚀 Blockchain Minting - Quick Start
+
+**Get from zero to minting in 5 minutes!**
+
+---
+
+## The 3-Terminal Workflow
+
+### Terminal 1: Anvil (Blockchain)
+```bash
+cd ~/CryptoTwin1
+./START_ANVIL_HIGH_GAS.sh
+```
+**Keep running!** Should show `gas_limit 100000000`
+
+## Terminal 2: Deploy Contract
+```bash
+cd ~/CryptoTwin1contracts
+forge clean && forge build
+
+
+### Terminal 3: Streamlit App  
+```bash
+cd ~/CryptoTwin1
+streamlit run src/app.py
+```
+
+---
+
+## In Browser: 5 Steps to Mint
+
+### 1. Upload IFC File
+- Tab: **"IFC Processing"**
+- Upload: `Ifc2x3_Duplex_Architecture.ifc`
+- Wait for ✅ Processing complete
+
+### 2. Connect Blockchain
+- **Sidebar** → "Blockchain Connection"
+- Select: **"Anvil (Local)"**
+- Click: **"Connect"**
+- See: ✅ Connected, ~10,000 ETH
+
+### 3. Load Contract
+- **Sidebar** → "Smart Contract"  
+- Mode: **"Deploy Contract"**
+- Click: **"Load Contract"**
+- See: ✅ Contract Loaded - Balloons for Success!
+
+### 4. Select Building
+- Tab: **"Blockchain Minting"**
+- Select your building
+- See: ✅ Validation passed
+- See: ✅ Gas estimate
+
+### 5. MINT! 🚀
+- **Scroll down**
+- Click: **"🚀 Mint Building Graph NFT"**
+- Wait ~30 seconds
+- 🎉 Success + Balloons!
+
 ### Key Development Features
 - **Modular Architecture**: Clean separation between UI, services, and data layers
 - **Comprehensive Testing**: Unit tests for all TopologicPy and Kuzu integrations
@@ -237,7 +297,7 @@ This project builds upon proven architectural patterns from adventurous_topologi
 
 ## 📄 License
 
-MIT License - see the LICENSE file for details.
+GNU AFFERO GENERAL PUBLIC LICENSE - see the LICENSE file for details.
 
 ---
 
